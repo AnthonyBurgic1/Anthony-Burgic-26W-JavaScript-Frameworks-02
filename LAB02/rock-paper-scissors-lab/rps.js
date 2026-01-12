@@ -17,7 +17,7 @@ rl.question("Choose rock, paper, or scissors: ", function (playerChoice) {
 
   // Validate input \\ 
   if (!choices.includes(playerChoice)) {
-    console.log("❌ Invalid choice. Please choose rock, paper, or scissors.");
+    console.log("Invalid choice. Please choose rock, paper, or scissors.");
     rl.close();
     return;
   }
@@ -25,20 +25,20 @@ rl.question("Choose rock, paper, or scissors: ", function (playerChoice) {
   // Computer choice \\ 
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
-  console.log(`🧑 You chose: ${playerChoice}`);
-  console.log(`💻 Computer chose: ${computerChoice}`);
+  console.log(`You chose: ${playerChoice}`);
+  console.log(`Computer chose: ${computerChoice}`);
 
   // Determine winner \\ 
   if (playerChoice === computerChoice) {
-    console.log("🤝 It's a tie!");
+    console.log("It's a tie!");
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
-    console.log("🎉 You win!");
+    console.log("You win!");
   } else {
-    console.log("😢 Computer wins!");
+    console.log("Computer wins!");
   }
 
   rl.close();
